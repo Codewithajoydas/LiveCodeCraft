@@ -3,6 +3,9 @@ let editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
   mode: "javascript",
   theme: "dracula",
   lineNumbers: true,
+  extraKeys: {
+    "Ctrl-Space": "autocomplete"  // Trigger autocomplete manually
+  }
 });
 
 // Load the saved code (if any) from localStorage
